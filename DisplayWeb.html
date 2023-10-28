@@ -19,6 +19,16 @@
         background-size: 99.999% 99.9999%;
         text-align: center;
     }
+    .textarea-container {
+        display: inline-block;
+        text-align: center;
+    }
+
+    textarea {
+        display: block; /* Make the textarea a block element */
+        margin: 0 auto; /* Center-align the textarea */
+    }
+    
 </style>
 
 <body>
@@ -26,10 +36,12 @@
         <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8"/>
         Language Translator
     </h1>
-    <textarea id="inputText" rows="4" cols="50" placeholder="Enter text in English"></textarea>
-    <button onclick="translateToArabic()">Translate to Arabic</button>
-    <p>Arabic Translation:</p>
-    <p id="outputText"></p>
+    <div class="textarea-container">
+        <textarea id="inputText" rows="4" cols="50" placeholder="Enter text in English"></textarea>
+        <button onclick="translateToArabic()">Translate to Arabic</button>
+        <p>Arabic Translation:</p>
+        <textarea id="outputText" rows="4" cols="50"></textarea>
+    </div>
     
 </body>
 
