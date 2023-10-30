@@ -5,19 +5,32 @@
     <title>Arabic To English Translator</title>
 </head>
 <style>
-    @font-face {
-        font-family: 'sketch_gothic_schoolregular';
-        src: url('sketch_gothic_school-webfont.woff2') format('woff2'),
-            url('sketch_gothic_school-webfont.woff') format('woff');
+     @font-face {
+        font-family: FairyDust;
+        src: url('fonts/FairyDustB.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
 
+    @font-face{
+        font-family: 'Rubik';
+        src: url('fonts/Rubik-VariableFont_wght.ttf') format('ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face{
+        font-family: 'Rubik';
+        src: url('fonts/Rubik-Italic-VariableFont_wght.ttf') format('ttf');
+        font-weight: normal;
+        font-style: italic;
+    }
+
     h1 {
         color: black;
-        font-size: 30px;
+        font-size: 50px;
         text-align: center;
-        font-family: 'sketch_gothic_schoolregular', Georgia;
+        font-family: 'FairyDust', sans-serif;
     }
 
     body {
@@ -39,18 +52,22 @@
         margin: 0 auto;
         /* Center-align the textarea */
     }
+
+    #outputText {
+        font-family: Rubik;
+    }
+
 </style>
 
 <body>
     <h1>
-        <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
         Language Translator
     </h1>
     <div class="textarea-container">
         <textarea id="inputText" rows="4" cols="50" placeholder="Enter text in English"></textarea>
         <button onclick="translateToArabic()">Translate to Arabic</button>
         <p>Arabic Translation:</p>
-        <textarea id="outputText" rows="4" cols="50"></textarea>
+        <textarea id="outputText" rows="4.5" cols="55" dir="rtl"></textarea>
     </div>
 
 </body>
