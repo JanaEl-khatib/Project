@@ -5,6 +5,14 @@
     <title>Arabic To English Translator</title>
 </head>
 <style>
+    @font-face {
+        font-family: 'sketch_gothic_schoolregular';
+        src: url('sketch_gothic_school-webfont.woff2') format('woff2'),
+            url('sketch_gothic_school-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     h1 {
         color: black;
         font-size: 30px;
@@ -19,21 +27,23 @@
         background-size: 99.999% 99.9999%;
         text-align: center;
     }
+
     .textarea-container {
         display: inline-block;
         text-align: center;
     }
 
     textarea {
-        display: block; /* Make the textarea a block element */
-        margin: 0 auto; /* Center-align the textarea */
+        display: block;
+        /* Make the textarea a block element */
+        margin: 0 auto;
+        /* Center-align the textarea */
     }
-    
 </style>
 
 <body>
     <h1>
-        <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8"/>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
         Language Translator
     </h1>
     <div class="textarea-container">
@@ -42,7 +52,7 @@
         <p>Arabic Translation:</p>
         <textarea id="outputText" rows="4" cols="50"></textarea>
     </div>
-    
+
 </body>
 
 </html>
