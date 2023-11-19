@@ -1,12 +1,12 @@
 // const {number2text} = require('src/number')
 
 //const {number2text} = require("arajs/src/number");
-
-require("Testing.js");
+import { a1 } from "Testing.js";
 
 //const  number  =  232;
 
 console.log('Hello');
+a1();
 
 //console.log(number2text(number)); // مئتان و إثنان و ثلاثون
 
