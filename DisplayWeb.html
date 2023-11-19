@@ -5,21 +5,21 @@
     <title>Arabic To English Translator</title>
 </head>
 <style>
-     @font-face {
+    @font-face {
         font-family: FairyDust;
         src: url('fonts/FairyDustB.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
 
-    @font-face{
+    @font-face {
         font-family: 'Rubik';
         src: url('fonts/Rubik-VariableFont_wght.ttf') format('ttf');
         font-weight: normal;
         font-style: normal;
     }
 
-    @font-face{
+    @font-face {
         font-family: 'Rubik';
         src: url('fonts/Rubik-Italic-VariableFont_wght.ttf') format('ttf');
         font-weight: normal;
@@ -56,7 +56,6 @@
     #outputText {
         font-family: Rubik;
     }
-
 </style>
 
 <body>
@@ -65,11 +64,11 @@
     </h1>
     <div class="textarea-container">
         <textarea id="inputText" rows="4" cols="50" placeholder="Enter text in English"></textarea>
-        <button onclick="translateToArabic()">Translate to Arabic</button>
+        <button id="translateToArabic">Translate to Arabic</button>        
         <p>Arabic Translation:</p>
         <textarea id="outputText" rows="4.5" cols="55" dir="rtl"></textarea>
+        <script src="CodingMain.js"></script>
     </div>
-    <script src="CodingMain.JS"></script> <!-- Include your JavaScript file -->
 </body>
 
 </html>

@@ -1,22 +1,17 @@
-// const {number2text} = require('src/number')
+const translateToArabic = document.querySelector("#translateToArabic");
+const inputText = document.querySelector("#inputText");
+const outputText = document.querySelector("#outputText");
 
-//const {number2text} = require("arajs/src/number");
-import { a1 } from "Testing.js";
+translateToArabic.addEventListener("click", () => {
+    let text = inputText.value;
 
-//const  number  =  232;
+    console.log(text);
 
-console.log('Hello');
-a1();
-
-//console.log(number2text(number)); // مئتان و إثنان و ثلاثون
-
-//const  text  =  'مَرْحَبًا بِكُمْ';
-
-//const  strippedText  =  stripTashkeel(text);
-
-//console.log(strippedText); // مرحبا بكم
-
-//function translateToArabic() {
-
-//};
-
+    let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=en|ar`;
+    // fetching api response and returning it with parsing into js obj
+    // and in another then method receiving that obj
+    fetch(apiUrl).then(res => res.json()).then(data => {
+            console.log(data);
+            outputText.value = data.responseData.translatedText;
+        });
+});
