@@ -1,13 +1,22 @@
 // const {number2text} = require('src/number')
 
-const { number2text } = require("arajs/src/number");
+//const {number2text} = require("arajs/src/number");
 
-const  number  =  232;
+require("Testing.js");
 
-console.log(number2text(number)); // مئتان و إثنان و ثلاثون
+//const  number  =  232;
 
-const  text  =  'مَرْحَبًا بِكُمْ';
+console.log('Hello');
 
-const  strippedText  =  stripTashkeel(text);
+//console.log(number2text(number)); // مئتان و إثنان و ثلاثون
 
-console.log(strippedText); // مرحبا بكم
+//const  text  =  'مَرْحَبًا بِكُمْ';
+
+//const  strippedText  =  stripTashkeel(text);
+
+//console.log(strippedText); // مرحبا بكم
+
+//function translateToArabic() {
+
+//};
+
