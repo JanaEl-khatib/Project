@@ -1,3 +1,5 @@
+// Used this website for the translating: https://mymemory.translated.net/doc/spec.php
+
 const translateToArabic = document.querySelector("#translateToArabic");
 const inputText = document.querySelector("#inputText");
 const outputText = document.querySelector("#outputText");
