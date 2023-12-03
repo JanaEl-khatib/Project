@@ -2,21 +2,21 @@
 
 @font-face {
     font-family: FairyDust;
-    src: url('fonts/FairyDustB.woff') format('woff');
+    src: url('fonts/fairydustb.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Rubik';
-    src: url('fonts/Rubik-VariableFont_wght.ttf') format('ttf');
+    src: url('fonts/rubik-variablefont_wght.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Rubik';
-    src: url('fonts/Rubik-Italic-VariableFont_wght.ttf') format('ttf');
+    src: url('fonts/rubik-italic-variablefont_wght.ttf') format('ttf');
     font-weight: normal;
     font-style: italic;
 }
