@@ -1,6 +1,7 @@
 const translateToArabic = document.querySelector("#translateToArabic");
 const inputText = document.querySelector("#inputText");
 const outputText = document.querySelector("#outputText");
+const translateCount = document.querySelector("#translateCount");
 
 translateToArabic.addEventListener("click", () => {
     let text = inputText.value;
@@ -26,7 +27,8 @@ translateToArabic.addEventListener("click", () => {
 
     // To increment translation count
     fetch(`${apiUrl}/translation`, {
-        method: 'POST'
+        method: 'POST',
+        headers: {'content-type': "text/plain", 'accept': "text/plain"}
     })
         .then(response => {
             // Handle success
@@ -38,11 +40,12 @@ translateToArabic.addEventListener("click", () => {
 
     // To get translation count
     fetch(`${apiUrl}`, {
-        method: 'GET'
+        method: 'GET',
+        headers: {'content-type': "application/json"}
     })
         .then(response => response.json())
         .then(data => {
-            const translateCount = data.translate_count;
+            translateCount.innerText = data.translate_count;
             // Use translateCount as needed
         })
         .catch(error => {
