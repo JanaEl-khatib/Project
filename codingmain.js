@@ -2,14 +2,12 @@ const translateToArabic = document.querySelector("#translateToArabic");
 const inputText = document.querySelector("#inputText");
 const outputText = document.querySelector("#outputText");
 const translateCount = document.querySelector("#translateCount");
+// Assuming API is running on localhost:3000
+const apiUrl = 'http://localhost:3000';
 
-translateToArabic.addEventListener("click", () => {
-    let text = inputText.value;
 
-    console.log(text);
-
+function getTranslation(text) {
     let translationApiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=en|ar`;
-
     // Fetching translation from external API
     fetch(translationApiUrl)
         .then(res => res.json())
@@ -21,14 +19,10 @@ translateToArabic.addEventListener("click", () => {
             console.error("Translation API error:", error);
             // Handle error
         });
-
-    // Assuming API is running on localhost:3000
-    const apiUrl = 'http://localhost:3000';
-
     // To increment translation count
     fetch(`${apiUrl}/translation`, {
         method: 'POST',
-        headers: {'content-type': "text/plain", 'accept': "text/plain"}
+        headers: { 'content-type': "text/plain", 'accept': "text/plain" }
     })
         .then(response => {
             // Handle success
@@ -37,11 +31,13 @@ translateToArabic.addEventListener("click", () => {
             console.error("Increment translation count API error:", error);
             // Handle error
         });
+}
 
+function getTranslationCount() {
     // To get translation count
     fetch(`${apiUrl}`, {
         method: 'GET',
-        headers: {'content-type': "application/json"}
+        headers: { 'content-type': "application/json" }
     })
         .then(response => response.json())
         .then(data => {
@@ -52,4 +48,19 @@ translateToArabic.addEventListener("click", () => {
             console.error("Get translation count API error:", error);
             // Handle error
         });
+}
+
+document.onreadystatechange = () => {
+    if (document.readyState === "interactive") {
+        getTranslationCount()
+    }
+}
+translateToArabic.addEventListener("click", () => {
+    let text = inputText.value;
+
+    console.log(text);
+
+    getTranslation(text);
+    getTranslationCount();
+
 });
