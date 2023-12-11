@@ -1,34 +1,38 @@
 h1 {
-        color: black;
-        font-size: 50px;
-        text-align: center;
-        font-family: 'FairyDust', sans-serif;
-    }
-
-    body {
-        background-image: url('https://i.pinimg.com/originals/86/db/24/86db242b0197c7d03d1166090f33cb9f.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 99.999% 99.9999%;
-        text-align: center;
-    }
-
-    .textarea-container {
-        display: inline-block;
-        text-align: center;
-    }
-
-    textarea {
-        display: block;
-        /* Make the textarea a block element */
-        margin: 0 auto;
-        /* Center-align the textarea */
-    }
-
-    #outputText {
-        font-family: Rubik;
-    }
-p {
-    color:navy;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'FairyDust', sans-serif;
 }
 
+body {
+    background-image: url('https://i.pinimg.com/originals/86/db/24/86db242b0197c7d03d1166090f33cb9f.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 99.999% 99.9999%;
+    text-align: center;
+}
+
+.textarea-container {
+    display: inline-block;
+    text-align: center;
+}
+
+textarea {
+    display: block;
+    /* Make the textarea a block element */
+    margin: 0 auto;
+    /* Center-align the textarea */
+}
+
+#outputText {
+    font-family: Rubik;
+}
+
+.border-paragraph {
+    background-color:#FEF1E7;
+    border: 1.5px solid black;
+    padding: 10x;
+    display: inline-block;
+    margin-top: 1%;
+}
